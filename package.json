@@ -1,5 +1,5 @@
 {
-  "name": "@last-rev/sidekick-util",
+  "name": "@last-rev/contentful-sidekick-util",
   "version": "0.0.1",
   "description": "A utility to help generate the tags necessary to use the LastRev sidekick",
   "main": "dist/index.js",
