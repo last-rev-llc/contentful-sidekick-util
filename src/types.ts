@@ -3,5 +3,4 @@ export type SidekickData = {
   'data-csk-entry-field'?: string;
   'data-csk-entry-type'?: string;
   'data-csk-entry-display-text'?: string;
-  'data-csk-entry-uuid': number;
 };

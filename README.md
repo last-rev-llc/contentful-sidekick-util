@@ -15,7 +15,7 @@ const out = sidekick(contentId, field, type, displayText);
 ```
 
 - `contentId` : The id of the contentful entry being rendered
-- `field`: The API name of the field from the contentful entryu which is rendered
+- `field`: The API name of the field from the contentful entry which is rendered
 - `type`: The content type ID of the entry being rendered
 - `displayText`: A human-friendly text that will be seen in the Contentful Sidekick sidebar. This can be used to represent the content itself, or it can be used on its own to group content in the sidebar
 
