@@ -1,13 +1,6 @@
 import { SidekickData } from './types';
 import startCase from './startCase';
 
-const startCase = (str: string) => {
-  return str
-    .split(' ')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-};
-
 export default (
   contentId?: string,
   fieldName?: string,
