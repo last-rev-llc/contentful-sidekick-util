@@ -1,6 +1,7 @@
 import faker from 'faker';
-import { startCase, camelCase } from 'lodash';
+import { camelCase } from 'lodash';
 import util from './index';
+import startCase from './startCase';
 
 describe('sidekick util', () => {
   it('outputs null if no id or display text is passed in', () => {
