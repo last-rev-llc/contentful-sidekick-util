@@ -26,7 +26,7 @@ const getSidekickInfo = (
     };
 };
 
-function sidekick(contentData: ContentData): SidekickData | null;
+function sidekick(contentData?: ContentData): SidekickData | null;
 
 function sidekick(contentData?: string, fieldName?: string, contentTypeId?: string, displayText?: string): SidekickData | null;
 
@@ -36,9 +36,10 @@ function sidekick(
   contentTypeId?: string,
   displayText?: string
 ): SidekickData | null {
-  if (typeof contentData === 'string') {
-    return getSidekickInfo(contentData, fieldName, contentTypeId, displayText);
-  }
+  if (typeof contentData === 'string') return getSidekickInfo(contentData, fieldName, contentTypeId, displayText);
+
+  if (!contentData) return getSidekickInfo(null, fieldName, contentTypeId, displayText);
+
   const {
     contentId: id,
     fieldName: name,
