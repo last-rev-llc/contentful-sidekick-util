@@ -1,5 +1,5 @@
-import { pickBy, identity, startCase } from 'lodash';
 import { SidekickData } from './types';
+import startCase from './startCase';
 
 export default (
   contentId?: string,
@@ -18,13 +18,10 @@ export default (
 
   const displayVal = getDisplayVal();
 
-  return pickBy(
-    {
-      'data-csk-entry-id': contentId,
-      'data-csk-entry-field': fieldName,
-      'data-csk-entry-type': contentTypeId,
-      'data-csk-entry-display-text': displayVal
-    },
-    identity
-  ) as SidekickData;
+  return {
+    ...(contentId && { 'data-csk-entry-id': contentId }),
+    ...(fieldName && { 'data-csk-entry-field': fieldName }),
+    ...(contentTypeId && { 'data-csk-entry-type': contentTypeId }),
+    ...(displayVal && { 'data-csk-entry-display-text': displayVal })
+  };
 };
